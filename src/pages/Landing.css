@@ -35,6 +35,8 @@ html {
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap;
+  min-width: 0;
 }
 
 .landing-header nav a {
@@ -43,6 +45,8 @@ html {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
+  white-space: nowrap;
+  font-size: 1rem;
 }
 
 .landing-header nav a:hover {
