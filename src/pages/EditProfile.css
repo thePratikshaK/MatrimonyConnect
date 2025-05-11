@@ -1,0 +1,117 @@
+.editProfileRoot {
+  min-height: 100vh;
+  background: #f7f6fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+.editProfileCard {
+  background: #e1e1e2;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.10), 0 2px 16px rgba(0,0,0,0.08);
+  padding: 2.5rem 4.5rem 2rem 2.5rem;
+  max-width: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.editProfileCard h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #5b21b6;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+.editProfileGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 3rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.editProfileField {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.editProfileField label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+.editProfileField input,
+.editProfileField textarea {
+  border: 1px solid #8f8f90;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  width: 100%;
+  background: #f6f6f6;
+  margin-bottom: 0.1rem;
+  transition: border 0.2s;
+  font-weight: 500;
+  color: #18181b;
+  resize: none;
+}
+.editProfileField input:focus,
+.editProfileField textarea:focus {
+  border: 2px solid #5b21b6;
+  background: #f3e8ff;
+}
+.editProfileFieldFull {
+  grid-column: 1 / span 2;
+}
+.editProfileBtn {
+  background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-end;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+  transition: background 0.2s;
+  margin-left: 1rem;
+}
+.editProfileBtn:hover {
+  background: linear-gradient(90deg, #6d28d9 0%, #7c3aed 100%);
+}
+.editProfileBackBtn {
+  background: #f3e8ff;
+  color: #7c3aed;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.9rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  align-self: flex-end;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+.editProfileBackBtn:hover {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+@media (max-width: 700px) {
+  .editProfileCard {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    border-radius: 14px;
+    max-width: 98vw;
+  }
+  .editProfileGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .editProfileBtn, .editProfileBackBtn {
+    width: 100%;
+    align-self: stretch;
+    margin-left: 0;
+    margin-top: 0.7rem;
+  }
+} 

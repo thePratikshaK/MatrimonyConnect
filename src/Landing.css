@@ -1,0 +1,173 @@
+.signup-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  position: relative;
+  overflow: hidden;
+}
+.signup-bg::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at 60% 40%, #a78bfa55 0%, #fff0 70%);
+  z-index: 0;
+  filter: blur(40px);
+}
+.signup-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255,255,255,0.85);
+  border-radius: 28px;
+  box-shadow: 0 8px 40px 0 rgba(124,58,237,0.13), 0 2px 16px rgba(0,0,0,0.08);
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  width: 100%;
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 2.5px solid transparent;
+  background-clip: padding-box, border-box;
+  border-image: linear-gradient(120deg, #a78bfa 0%, #8ec5fc 100%) 1;
+  animation: floatCard 1.8s cubic-bezier(.4,0,.2,1) 0s 1;
+  backdrop-filter: blur(8px) saturate(1.2);
+}
+@keyframes floatCard {
+  0% { transform: translateY(40px) scale(0.98); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.signup-card .signup-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a78bfa 0%, #8ec5fc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2.2rem;
+  box-shadow: 0 2px 12px #a78bfa33;
+  position: absolute;
+  left: 50%;
+  top: -32px;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+}
+.signup-card h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.3rem;
+  font-size: 1.8rem;
+  font-weight: 900;
+  text-align: center;
+  color: #5b21b6;
+  letter-spacing: -1px;
+  text-shadow: 0 1px 0 #fff8, 0 2px 8px #a78bfa22;
+}
+.signup-field {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+.signup-field input[type="text"],
+.signup-field input[type="email"],
+.signup-field input[type="password"] {
+  border: none;
+  outline: none;
+  background: rgba(246,246,249,0.95);
+  border-radius: 2rem;
+  padding: 1.1rem 1.3rem;
+  font-size: 1.12rem;
+  margin-top: 0.2rem;
+  box-shadow: 0 1.5px 8px rgba(124,58,237,0.06);
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  font-weight: 500;
+  color: #3b0764;
+}
+.signup-field input:focus {
+  border: 2px solid #a78bfa;
+  background: #f3e8ff;
+  box-shadow: 0 0 0 2px #c4b5fd44;
+}
+.signup-field input.error {
+  border: 1.5px solid #e53e3e;
+  background: #fef2f2;
+}
+.signup-error {
+  color: #e53e3e;
+  font-size: 1.01rem;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  font-weight: 600;
+}
+.gender-field label {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #7c3aed;
+}
+.gender-options {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.3rem;
+}
+.gender-options label {
+  font-weight: 600;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #5b21b6;
+}
+.gender-options input[type="radio"] {
+  accent-color: #a78bfa;
+  width: 1.1em;
+  height: 1.1em;
+}
+.signup-btn {
+  background: linear-gradient(90deg, #7c3aed 0%, #8ec5fc 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 1.1rem 0;
+  font-size: 1.18rem;
+  font-weight: 800;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 4px 18px rgba(124,58,237,0.15);
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 0 #fff8;
+}
+.signup-btn:hover {
+  background: linear-gradient(90deg, #5b21b6 0%, #8ec5fc 100%);
+  box-shadow: 0 8px 28px rgba(124,58,237,0.22);
+  transform: translateY(-2px) scale(1.01);
+}
+.signup-success {
+  color: #22c55e;
+  text-align: center;
+  margin-top: 1.2rem;
+  font-weight: 700;
+  font-size: 1.13rem;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 600px) {
+  .signup-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    border-radius: 16px;
+    max-width: 98vw;
+  }
+  .signup-card .signup-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    top: -24px;
+  }
+  .signup-card h2 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+} 

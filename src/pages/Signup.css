@@ -1,0 +1,116 @@
+.signup-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafbfc;
+}
+.signup-card {
+  background: #747bff45;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.13), 0 2px 16px rgba(0,0,0,0.10);
+  padding: 2.2rem 2.2rem 1.5rem 2.2rem;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.signup-card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  color: #18181b;
+}
+.signup-field {
+  margin-bottom: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.signup-field label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+  margin-left: 0.2rem;
+}
+.signup-field input[type="text"],
+.signup-field input[type="email"],
+.signup-field input[type="password"] {
+  border: 1.5px solid #e5e7eb;
+  outline: none;
+  background: #f6f6f6;
+  border-radius: 8px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  margin-top: 0.1rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  transition: border 0.2s;
+}
+.signup-field input:focus {
+  border: 1.5px solid #7c3aed;
+  background: #f3e8ff;
+}
+.signup-field input.error {
+  border: 1.5px solid #e53e3e;
+}
+.signup-error {
+  color: #e53e3e;
+  font-size: 0.92rem;
+  margin-top: 0.2rem;
+  margin-left: 0.2rem;
+  font-weight: 500;
+  text-align: left;
+  display: block;
+}
+.gender-field label {
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+  text-align: left;
+  margin-left: 0.2rem;
+}
+.gender-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.3rem;
+}
+.gender-options label {
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #18181b;
+}
+.signup-btn {
+  background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+  width: 100%;
+}
+.signup-btn:hover {
+  background: linear-gradient(90deg, #6d28d9 0%, #7c3aed 100%);
+}
+.signup-success {
+  color: #22c55e;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .signup-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    border-radius: 14px;
+    max-width: 98vw;
+  }
+} 

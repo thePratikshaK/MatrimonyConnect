@@ -1,0 +1,118 @@
+.profileDetailRoot {
+  min-height: 100vh;
+  background: #f7f6fd;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.profileDetailCard {
+  background: #e1e1e2;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.10), 0 2px 16px rgba(0,0,0,0.08);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+.profileHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.profileAvatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ede9fe;
+  background: #ede9fe;
+}
+.profileName {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #5b21b6;
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+.profileStatus {
+  font-size: 1.05rem;
+  color: #7c3aed;
+  font-weight: 500;
+  text-align: left;
+}
+.profileSection {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #7c3aed;
+  margin-bottom: 0.7rem;
+  text-align: left;
+}
+.sectionContent {
+  color: #18181b;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left;
+}
+.profileRow {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 0.7rem;
+}
+.profileLabel {
+  font-weight: 600;
+  color: #6b7280;
+  min-width: 120px;
+  text-align: left;
+}
+.profileValue {
+  color: #18181b;
+  font-weight: 500;
+  text-align: left;
+}
+.profileEditBtn {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: #f3e8ff;
+  color: #7c3aed;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.4rem 1.1rem 0.4rem 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: 0 1px 6px rgba(124,58,237,0.07);
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  z-index: 2;
+}
+.profileEditBtn:hover {
+  background: #7c3aed;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .profileDetailCard {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    border-radius: 14px;
+    max-width: 98vw;
+  }
+  .profileHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .profileAvatar {
+    width: 64px;
+    height: 64px;
+  }
+} 
