@@ -13,7 +13,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #fff;
+  background: #b1600b;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   position: fixed;
   top: 0;
@@ -26,7 +26,7 @@ html {
 .webTitle {
   font-size: 20px;
   font-weight: bold;
-  color: #7c3aed;
+  color: #fff;
   display: flex;
   align-items: center;
 }
@@ -41,7 +41,7 @@ html {
 
 .landing-header nav a {
   margin-left: 0;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s;
@@ -50,13 +50,13 @@ html {
 }
 
 .landing-header nav a:hover {
-  color: #7c3aed;
+  color: #fff;
 }
 
 .login-label {
   font-weight: 600;
   cursor: pointer;
-  padding: 0 2.4rem 0 0 ;
+  padding: 0 3rem 0 0 ;
  
   font-size: 1rem;
 }
@@ -189,7 +189,7 @@ html {
 .login-modal-bg {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(44, 36, 80, 0.18);
+  background: #18181bdb;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -200,7 +200,7 @@ html {
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(124,58,237,0.13), 0 2px 16px rgba(0,0,0,0.10);
   padding: 2.2rem 2rem 1.5rem 2rem;
-  min-width: 320px;
+  min-width: 420px;
   max-width: 95vw;
   position: relative;
   display: flex;
@@ -233,11 +233,11 @@ html {
 }
 .login-modal-form input[type="text"],
 .login-modal-form input[type="password"] {
-  border: 1.5px solid #e5e7eb;
+  border: 1.5px solid #18181b45;
   border-radius: 8px;
   padding: 0.7rem 1rem;
   font-size: 1rem;
-  background: #f6f6f6;
+  background: #fff;
   transition: border 0.2s;
   font-weight: 500;
   color: #18181b;
@@ -255,7 +255,7 @@ html {
   font-weight: 500;
 }
 .login-modal-btn {
-  background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+  background: linear-gradient(90deg, #b1600b 0%, #6d28d9 100%);
   color: #fff;
   border: none;
   border-radius: 1.5rem;
@@ -268,7 +268,7 @@ html {
   transition: background 0.2s;
 }
 .login-modal-btn:hover {
-  background: linear-gradient(90deg, #6d28d9 0%, #7c3aed 100%);
+  background: linear-gradient(90deg, #b1600b 0%, #7c3aed 100%);
 }
 
 .login-modal-card h2 {
@@ -293,16 +293,16 @@ html {
   box-shadow: 0 8px 32px rgba(124,58,237,0.10), 0 2px 16px rgba(0,0,0,0.10);
   padding: 2.2rem 2.5rem;
   min-width: 320px;
-  max-width: 500px;
+  max-width: 100%;
   width: 100%;
   margin: 0 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-left: 6px solid #7c3aed;
+  border-left: 6px solid #b1600b;
 }
 .services-card h3, .contact-card h3 {
-  color: #7c3aed;
+  color: #b1600b;
   margin-bottom: 1rem;
   text-align: left;
   font-size: 1.35rem;
@@ -335,13 +335,18 @@ html {
   color: #5b21b6;
   font-weight: 600;
 }
+.services-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
 @media (max-width: 700px) {
   .services-card, .contact-card {
     padding: 1.2rem 0.7rem;
     border-radius: 14px;
     min-width: 0;
-    max-width: 98vw;
-    border-left: 4px solid #7c3aed;
+    max-width: 100%;
+    border-left: 4px solid #b1600b;
   }
   .services-section, .contact-section {
     padding: 1.2rem 0 1.2rem 0;
@@ -367,16 +372,16 @@ html {
   box-shadow: 0 8px 32px rgba(124,58,237,0.10), 0 2px 16px rgba(0,0,0,0.10);
   padding: 2.2rem 2.5rem;
   min-width: 320px;
-  max-width: 650px;
+  max-width: 100%;
   width: 100%;
   margin: 0 1rem 0 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-left: 6px solid #7c3aed;
+  border-left: 6px solid #b1600b;
 }
 .about-card h3 {
-  color: #7c3aed;
+  color: #b1600b;
   margin-bottom: 1rem;
   text-align: left;
   font-size: 1.35rem;
@@ -399,6 +404,6 @@ html {
     border-radius: 14px;
     min-width: 0;
     max-width: 98vw;
-    border-left: 4px solid #7c3aed;
+    border-left: 4px solid #b1600b;
   }
 } 

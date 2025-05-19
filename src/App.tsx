@@ -10,6 +10,7 @@ import ProfileDetail from './pages/ProfileDetail';
 import Landing from './pages/Landing';
 import Signup from './pages/Signup';
 import EditProfile from './pages/EditProfile';
+import MatchProfile from './pages/MatchProfile';
 import './App.css';
 
 // Create a wrapper component to handle header visibility
@@ -58,6 +59,7 @@ function AppContent() {
             </PrivateRoute>
           }
         />
+        <Route path="/match/:id" element={<MatchProfile />} />
       </Routes>
     </div>
   );

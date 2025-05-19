@@ -12,9 +12,11 @@ export default function Header({ showProfileLink = true }: HeaderProps) {
         <span role="img" aria-label="heart">💜</span> MatrimonyConnect
       </div>
       <nav className="header-nav">
-        <Link to="/">Home</Link>
+        <Link to="/dashboard">Home</Link>
         <Link to="/profile/1">Profile</Link>
         <Link to="/settings">Settings</Link>
+        <Link to="/">Logout</Link>
+
         {showProfileLink && (
           <Link to="/profile/1" className="profile-link">
             <span className="header-avatar-icon">

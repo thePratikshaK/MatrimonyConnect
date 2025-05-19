@@ -1,0 +1,239 @@
+.matchProfileRoot {
+  min-height: 100vh;
+  background: #faf9fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.matchProfileCard {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.10), 0 2px 16px rgba(0,0,0,0.10);
+  padding: 2.5rem 3rem;
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.matchProfileBackBtn {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: #f3e8ff;
+  color: #7c3aed;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+  transition: background 0.2s, color 0.2s;
+  z-index: 2;
+}
+.matchProfileBackBtn:hover {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.matchProfileAvatarTop {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.matchProfileAvatarSquare {
+  width: 280px;
+  height: 280px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(124,58,237,0.10);
+}
+
+.matchProfileRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.matchProfileName {
+  color: #7c3aed;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.matchProfileDetail {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+}
+
+.matchProfileNotFound {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.matchProfileGallery {
+  margin-top: 2.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(124,58,237,0.07);
+  padding: 1.5rem 2rem;
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.matchProfileGalleryTitle {
+  color: #7c3aed;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.matchProfileGalleryGrid {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.matchProfileGalleryThumb {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(124,58,237,0.10);
+  border: 2px solid #f3e8ff;
+  transition: border 0.2s, transform 0.2s;
+}
+.matchProfileGalleryThumb:hover {
+  border: 2px solid #7c3aed;
+  transform: scale(1.07);
+}
+
+.matchProfileModalBg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(24,24,27,0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.matchProfileModal {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(124,58,237,0.13), 0 2px 16px rgba(0,0,0,0.10);
+  padding: 2rem 2.5rem 1.5rem 2.5rem;
+  min-width: 320px;
+  max-width: 95vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.matchProfileModalImg {
+  max-width: 70vw;
+  max-height: 60vh;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(124,58,237,0.10);
+  margin-bottom: 1.2rem;
+  background: #f3f3f3;
+  transition: transform 0.2s;
+  z-index: 1;
+}
+.matchProfileModalControls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1.5rem;
+  z-index: 2;
+  background: rgba(255,255,255,0.85);
+  padding: 0.5rem 0;
+  border-radius: 0 0 16px 16px;
+}
+.matchProfileModalControls button {
+  background: #f3e8ff;
+  color: #7c3aed;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.matchProfileModalControls button:hover {
+  background: #7c3aed;
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .matchProfileCard {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0.7rem;
+    gap: 1.5rem;
+    max-width: 98vw;
+  }
+  .matchProfileAvatarSquare {
+    width: 180px;
+    height: 180px;
+  }
+  .matchProfileName {
+    font-size: 1.3rem;
+  }
+  .matchProfileBackBtn {
+    top: 1rem;
+    left: 1rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+  .matchProfileGallery {
+    padding: 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .matchProfileGalleryGrid {
+    gap: 0.7rem;
+  }
+  .matchProfileGalleryThumb {
+    width: 60px;
+    height: 60px;
+  }
+  .matchProfileModal {
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+  }
+  .matchProfileModalImg {
+    max-width: 95vw;
+    max-height: 40vh;
+  }
+  .matchProfileModalControls {
+    bottom: 0.5rem;
+    padding: 0.3rem 0;
+  }
+} 

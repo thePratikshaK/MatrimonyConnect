@@ -32,7 +32,9 @@ export default function Dashboard() {
       <Header />
       <main className="dashboard-main">
         <section className="dashboard-profile-card">
-          <img src={user.avatar} alt={user.name} className="profile-avatar" />
+          <Link to="/profile/1">
+            <img src={user.avatar} alt={user.name} className="profile-avatar" style={{ cursor: 'pointer' }} />
+          </Link>
           <div>
             <div className="profile-name">{user.name}</div>
             <div className="profile-status">{user.status}</div>
@@ -51,11 +53,11 @@ export default function Dashboard() {
           </div>
           <div className="matches-list">
             {matches.map((m, i) => (
-              <div className="match-card" key={i}>
+              <Link to={`/match/${i+1}`} className="match-card" key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <img src={m.avatar} alt={m.name} className="match-avatar" />
                 <div className="match-name">{m.name}</div>
                 <div className="match-title">{m.title}</div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

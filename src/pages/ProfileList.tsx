@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './ProfileList.css';
+import { Link } from 'react-router-dom';
 
 const mockProfiles = [
   {
@@ -70,7 +71,9 @@ export default function ProfileList() {
               <div className="profileListName">{profile.name}, {profile.age}</div>
               <div className="profileListLocation">Location: {profile.location}</div>
               <div className="profileListBio">Bio: {profile.bio}</div>
-              <button className="profileListBtn">View Profile</button>
+              <Link to={`/match/${i+1}`} className="profileListBtn" style={{ textDecoration: 'none', color: 'inherit', display: 'block', textAlign: 'center' }}>
+                View Profile
+              </Link>
             </div>
           ))}
         </div>

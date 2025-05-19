@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #fff;
+  background: #b1600b;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   padding: 1rem 2rem;
   position: fixed;
@@ -17,7 +17,7 @@
 .header-logo {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #7c3aed;
+  color: #fff !important;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -30,7 +30,7 @@
 }
 
 .header-nav a {
-  color: #18181b;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -38,7 +38,7 @@
 }
 
 .header-nav a:hover {
-  color: #7c3aed;
+  color: #fff;
 }
 
 .header-avatar-icon {
