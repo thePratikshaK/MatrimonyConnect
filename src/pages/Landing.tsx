@@ -13,6 +13,7 @@ export default function Landing() {
   const [showLogin, setShowLogin] = useState(false);
   const [loginData, setLoginData] = useState({ mobile: '', password: '' });
   const [loginError, setLoginError] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLoginChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLoginData({ ...loginData, [e.target.name]: e.target.value });
@@ -37,11 +38,14 @@ export default function Landing() {
         <div className="webTitle">
           <span role="img" aria-label="heart">💜</span> MatrimonyConnect
         </div>
-        <nav>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
-          <span className="login-label" onClick={() => setShowLogin(true)}><a>Login</a></span>
+        <button className="hamburger" onClick={() => setMenuOpen(m => !m)} aria-label="Menu">
+          <span className="hamburger-icon">☰</span>
+        </button>
+        <nav className={menuOpen ? 'nav-open' : ''}>
+          <a href="#about" onClick={() => setMenuOpen(false)}>About Us</a>
+          <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <span className="login-label" onClick={() => { setShowLogin(true); setMenuOpen(false); }}><a>Login</a></span>
         </nav>
       </header>
       <section className="hero-section">

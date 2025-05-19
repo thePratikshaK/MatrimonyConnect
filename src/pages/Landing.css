@@ -61,7 +61,20 @@ html {
   font-size: 1rem;
 }
 
-
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 1100;
+}
+.hamburger-icon {
+  display: block;
+  line-height: 1;
+}
 
 .hero-section {
   position: relative;
@@ -180,9 +193,114 @@ html {
   font-size: 1rem;
 }
 @media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+  .landing-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  .landing-header nav {
+    display: none;
+    flex-direction: column;
+    background: #b1600b;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 1rem 0 1rem 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 1001;
+    border-radius: 0 0 16px 16px;
+  }
+  .landing-header nav.nav-open {
+    display: flex;
+  }
+  .landing-header nav a, .landing-header .login-label {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #fff2;
+  }
+  .landing-header nav a:last-child, .landing-header .login-label:last-child {
+    border-bottom: none;
+  }
+  .hero-section {
+    height: auto;
+    min-height: 220px;
+    margin-bottom: 1rem;
+  }
+  .hero-bg {
+    height: 180px;
+    border-radius: 12px;
+  }
+  .hero-content h1 {
+    font-size: 1.2rem;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .hero-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+  }
   .features-section {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .featured-members, .why-choose-us {
+    min-width: 0;
+    padding: 1rem 0.7rem;
+    border-radius: 12px;
+  }
+  .members-list {
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+  .member-card {
+    width: 80px;
+    padding: 0.5rem 0.3rem;
+  }
+  .member-card img {
+    width: 40px;
+    height: 40px;
+  }
+  .about-section, .services-section, .contact-section {
+    padding: 1.2rem 0 0.7rem 0.5rem;
+  }
+  .about-card, .services-card, .contact-card {
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    min-width: 0;
+    max-width: 98vw;
+  }
+  .about-card h3, .services-card h3, .contact-card h3 {
+    font-size: 1.1rem;
+  }
+  .about-card p, .services-list li, .contact-info div {
+    font-size: 0.97rem;
+  }
+  .login-modal-card {
+    min-width: 90vw;
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+  }
+  .login-modal-form label {
+    font-size: 0.95rem;
+  }
+  .login-modal-form input[type="text"],
+  .login-modal-form input[type="password"] {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.7rem;
+  }
+  .login-modal-btn {
+    font-size: 1rem;
+    padding: 0.7rem 0;
   }
 }
 

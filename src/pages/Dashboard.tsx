@@ -53,11 +53,11 @@ export default function Dashboard() {
           </div>
           <div className="matches-list">
             {matches.map((m, i) => (
-              <Link to={`/match/${i+1}`} className="match-card" key={i} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div className="match-card" key={i}>
                 <img src={m.avatar} alt={m.name} className="match-avatar" />
                 <div className="match-name">{m.name}</div>
                 <div className="match-title">{m.title}</div>
-              </Link>
+              </div>
             ))}
           </div>
         </section>
